@@ -17,12 +17,14 @@ class StockListenerTest {
 		listener = new StockListener(stockBroker);
 		stock = new Stock("FDI", 100.0);
 	}
+	
 	@Test
 	void sellStocksWhenPriceGoesUp(){
 		when(stockBroker.getQoute(stock)).thenReturn(150.00);
 		listener.takeAction(stock);
 		verify(stockBroker).sell(stock, 10);
 	}
+	
 	@Test
 	void buyStocksWhenPriceGoesDown() {
 		//stock = new Stock("FDI", 100.0);
