@@ -8,12 +8,6 @@ public class BloodCheck {
 	private static final double ALERT = 10.0;
 	private static final double MAX = 20.0;
 
-//	public static void main(String[] args) {
-//		BloodCheck blood = new BloodCheck();
-//		
-//		double[] Jimmy = {0.2, 10.2, 20.2};
-//		System.out.println(blood.checkBloodSugarForDiabetesType2(Jimmy));
-//	}
 
 	public String checkBloodSugarLevel(double sugarLevel) throws IllegalArgumentException {
 		String result = "";

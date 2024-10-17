@@ -1,6 +1,6 @@
-
 package com.tus.sugarlevel;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,8 +43,8 @@ public class BloodCheckTest {
 	
 	@ParameterizedTest
 	@MethodSource("validBloodSugarLevels")
-	void testAverageForDiabetesType2(double[] sugarLevels) {
-		assertTrue(bloodCheck.checkBloodSugarForDiabetesType2(sugarLevels));
+	void testAverageForDiabetesType2(boolean result, double[] sugarLevels) {
+		assertFalse(bloodCheck.checkBloodSugarForDiabetesType2(sugarLevels));
 	}
 	
 	static Stream<Arguments> invalidBloodSugarLevels(){
