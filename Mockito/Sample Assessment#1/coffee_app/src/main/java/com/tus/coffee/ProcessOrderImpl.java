@@ -58,8 +58,7 @@ public class ProcessOrderImpl {
 		if (order == null) {
 			throw new OrderNotFoundException(customerAccountId);
 		} else {
-			final ArrayList<OrderItem> orderItems = (ArrayList<OrderItem>) order
-					.getOrderItems();
+			final ArrayList<OrderItem> orderItems = (ArrayList<OrderItem>) order.getOrderItems();
 			if (orderItems.isEmpty()) {
 				throw new OrderEmptyException(customerAccountId);
 			}
